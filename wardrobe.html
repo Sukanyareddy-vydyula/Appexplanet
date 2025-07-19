@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dress Collection – Trendy Threads</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Our Dress Collection</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery" id="dress-gallery">
+    <h2>Explore Our Looks</h2>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trendy Threads</p>
+  </footer>
+
+  <script>
+    const imageNames = ["imag1.png", "image5.jpg", "image4.jpg", "image2.jpg","image3.jpg","image6.jpg","image8.jpg","image9.jpg","image10.jpg","kimage1.jpg","kimage2.jpg","kimage3.jpg","kimage4.jpg","kimage5.jpg","kimage6.webp","bimage1.jpg","bimage2.jpg","bimage3.jpg","bimage4.jpg","bimage5.jpg",]; // Add filenames from your folder
+    const gallery = document.getElementById("dress-gallery");
+
+    imageNames.forEach(name => {
+      const img = document.createElement("img");
+      img.src = "Images/" + name; // Folder path
+      img.alt = "Fashion Dress";
+      img.className = "gallery-img";
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>
