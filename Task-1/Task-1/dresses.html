@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dress Gallery – Trendy Threads</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="gallery-header">
+    <div class="logo">👗 Trendy Threads</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dresses.html">Dresses</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+    <h2>Our Dress Collection</h2>
+    <div class="gallery-grid" id="dress-gallery"></div>
+
+    <div class="back-btn-container">
+      <a href="home.html" class="cta-btn">← Go Back</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trendy Threads. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const images = [
+      "gimage1.jpg", "gimage2.jpg", "gimage3.jpg", "gimage4.jpg", "gimage5.jpg",
+      "bimage1.jpg", "bimage2.jpg", "bimage3.jpg", "bimage4.jpg", "bimage5.jpg",
+      "kimage1.jpg", "kimage2.jpg", "kimage3.jpg", "kimage4.jpg", "kimage5.jpg"
+    ];
+    const gallery = document.getElementById("dress-gallery");
+
+    images.forEach(name => {
+      const img = document.createElement("img");
+      img.src = "../images/" + name;
+      img.alt = name;
+      img.className = "gallery-img";
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>
